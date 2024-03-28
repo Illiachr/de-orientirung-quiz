@@ -1,4 +1,4 @@
-export default function OptListItem({optName, optId, optText, checked, selectedOpt}) {
+export default function OptListItem({optName, optId, optText, checked, onChange}) {
   return (
     <li>
       <input
@@ -6,7 +6,7 @@ export default function OptListItem({optName, optId, optText, checked, selectedO
         name={optName}
         id={optId}
         checked={checked}
-        onChange={() => {selectedOpt = optId;}}
+        onChange={onChange}
       />
       <label htmlFor={optId}>{optText}</label>
     </li>
