@@ -1,0 +1,45 @@
+/* Font Declarations */
+
+@font-face {
+  font-family: "Opens Sans", sans-serif;
+  src: local("Opens Sans") format("truetype");
+}
+
+/* Common Styles */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+body {
+  font-family: "Opens Sans", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #151618;
+  position: relative;
+}
