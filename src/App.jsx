@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header.jsx';
 import Card from './components/Card/Card.jsx';
 import data from './mock/data.js';
+import Results from './components/Results/Results.jsx';
 
 // const userAnswers = [
 //   {
@@ -11,9 +12,17 @@ import data from './mock/data.js';
 //   }
 // ];
 
+const TEST_RESULTS_DEFAULTS = {
+  totalCorrect: 0,
+  totalFailed: 0,
+  totalMissed: 0
+};
+
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [testSubmitted, setTestSubmitted] = useState(false);
+  const [testResults, setTestResults] = useState(TEST_RESULTS_DEFAULTS);
 
   const handleIdState = (e) => {
     const value = Number(e.target.value);
@@ -32,15 +41,32 @@ function App() {
     setUserAnswers(handleUserUpdate);
   };
 
+  const calcResults = (data, userAnswers) => {
+    
+  };
+
+  const onTestSubmit = () => {
+    const results = calcResults(userAnswers);
+    setTestResults(results);
+    setTestSubmitted(true);
+  };
+
   return (
     <>
       <Header title={'Leben in Deutschland'} subtitle={'Einbürgerungstest'} />
-      <Card
+      {!testSubmitted ? 
+      (
+        <Card
         data={data}
         questionId={currentQuestion}
         onButtonClick={handleIdState}
         updateUserAnswers={updateUserAnswers}
+        onSubmit={onTestSubmit}
       />
+      )
+      :(
+        <Results {...testResults} />
+      )}
     </>
   );
 }

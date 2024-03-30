@@ -15,3 +15,5 @@
 13. TODO: Add unit tests with Jest, shift to TDD
 14. TODO: Introduce JSDoc
 15. TODO: Introduce TS
+16. TODO: Refactoring. Custom hooks
+17. TODO: Improve state management by introducing useReducer
