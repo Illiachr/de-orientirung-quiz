@@ -13,7 +13,8 @@ const buttonGroup = [
 const Card = ({data,
   questionId,
   onButtonClick,
-  updateUserAnswers
+  updateUserAnswers,
+  onSubmit
 }) => {
   const [selectedOpt, setSelectedOpt] = useState('');
 
@@ -101,7 +102,8 @@ Card.propTypes = {
   data: PropTypes.object.isRequired,
   questionId: PropTypes.number.isRequired,
   onButtonClick: PropTypes.func.isRequired,
-  updateUserAnswers: PropTypes.func.isRequired
+  updateUserAnswers: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Card;

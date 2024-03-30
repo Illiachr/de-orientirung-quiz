@@ -25,8 +25,6 @@ function App() {
 
   const updateUserAnswers = ({questionId, optId}) => {
     const handleUserUpdate = (prev) => {
-      console.log({userAnswers});
-      console.log({prev});
       const filtered = prev.filter((a) => a.questionId !== questionId);
       const next = [...filtered, {questionId, optId}];
       return next;
