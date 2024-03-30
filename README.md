@@ -1,8 +1,17 @@
-# React + Vite
+# Current tasks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. TODO: Implement Test Submition and Display Result on the Card top
+2. TODO: Introduce touched state to form inputs
+3. TODO: Improve styling
+4. TODO: Introduce Home page and test page layouts
+5. TODO: Introduce Test results layout
+6. TODO: Implement results analysis with diagram
+7. TODO: Introduce Admin Layout
+8. TODO: Implement new question feature
+9. TODO: Implement edit question feature
+10. TODO: Implement backend with NodeJS + Postgres
+11. TODO: Introduce role-based authorization
+12. TODO: Add documentation in German
+13. TODO: Add unit tests with Jest, shift to TDD
+14. TODO: Introduce JSDoc
+15. TODO: Introduce TS
