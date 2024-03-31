@@ -4,6 +4,7 @@ import Header from './components/Header/Header.jsx';
 import Card from './components/Card/Card.jsx';
 import data from './mock/data.js';
 import Results from './components/Results/Results.jsx';
+import { calcResults } from './lib/helpers.js';
 
 // const userAnswers = [
 //   {
@@ -41,12 +42,8 @@ function App() {
     setUserAnswers(handleUserUpdate);
   };
 
-  const calcResults = (data, userAnswers) => {
-    
-  };
-
   const onTestSubmit = () => {
-    const results = calcResults(userAnswers);
+    const results = calcResults(data.questions, userAnswers);
     setTestResults(results);
     setTestSubmitted(true);
   };
@@ -57,12 +54,12 @@ function App() {
       {!testSubmitted ? 
       (
         <Card
-        data={data}
-        questionId={currentQuestion}
-        onButtonClick={handleIdState}
-        updateUserAnswers={updateUserAnswers}
-        onSubmit={onTestSubmit}
-      />
+          data={data}
+          questionId={currentQuestion}
+          onButtonClick={handleIdState}
+          updateUserAnswers={updateUserAnswers}
+          onSubmit={onTestSubmit}
+        />
       )
       :(
         <Results {...testResults} />

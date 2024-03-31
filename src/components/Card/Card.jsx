@@ -39,8 +39,8 @@ const Card = ({data,
       questionId: data.questions[questionId].id,
       optId: selectedOpt.split('-')[1]
     });
-    // onButtonClick(e);
-    // formReset();
+    onSubmit();
+    formReset();
   };
 
   const checkAnswer = (selected) => {

@@ -1,9 +1,10 @@
 # Current tasks
 
-1. TODO: Implement Test Submition and Display Result on the Card top
-2. TODO: Introduce touched state to form inputs
-3. TODO: Improve styling
-4. TODO: Introduce Home page and test page layouts
+1. Implement Test Submition and Display Result on the Card top
+18. TODO: FIX On test submition alway exists missed answer. Check. Possibly useEffect should be used.
+2. TODO: FEATURE: Introduce touched state to form inputs
+3. TODO: FEATURE: Improve styling
+4. TODO: FEATURE: Introduce Home page and test page layouts
 5. TODO: Introduce Test results layout
 6. TODO: Implement results analysis with diagram
 7. TODO: Introduce Admin Layout

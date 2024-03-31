@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "node ./src/test/calcTestResult.js"
+    "test": "node ./src/test/calcResult.unit.test.js"
   },
   "dependencies": {
     "prop-types": "^15.8.1",

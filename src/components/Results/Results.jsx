@@ -1,7 +1,7 @@
 const Results = ({
-  totalCorrect = 0,
-  totalFailed = 0,
-  totalMissed = 0
+  totalCorrect,
+  totalFailed,
+  totalMissed
 }) => {
   return (
     <div>
