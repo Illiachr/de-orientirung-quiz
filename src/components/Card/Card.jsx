@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import OptList from '../OptList/OptList.jsx';
 import Button from '../Button/Button.jsx';
 import { handleOptSelect } from '../../lib/helpers.js';
+import Container from '../Container/Container.jsx';
 
 const cardSubtitle = 'Bitte kreuzen Sie an. Es gibt nur eine richtige Antwort.';
 
 const buttonGroup = [
-  {type: 'next', label: 'Nächste Frage &gt;', value: '+1'}
+  { type: 'next', label: 'Nächste Frage &gt;', value: '+1' }
 ];
 
-const Card = ({data,
+const Card = ({ data,
   questionId,
   onButtonClick,
   updateUserAnswers,
@@ -51,6 +52,7 @@ const Card = ({data,
 
   return (
     <div className="question-card">
+      <Container>
         <div className="question-card__title">
           Frage {questionId + 1} von {data.questions.length}
         </div>
@@ -58,7 +60,15 @@ const Card = ({data,
           {cardSubtitle}
         </span>
         <form onSubmit={onFormSubmit}>
-        <div><span>{checkAnswer(selectedOpt) ? 'RICHTIG' : 'FALSCH'}</span></div>
+          <div>
+            {selectedOpt &&
+              (
+                <span>
+                  {checkAnswer(selectedOpt) ? 'RICHTIG' : 'FALSCH'}
+                </span>
+              )
+            }
+          </div>
           <p className="text">
             {data.questions[questionId].text}
           </p>
@@ -84,17 +94,18 @@ const Card = ({data,
               >
                 Nächste Frage &gt;
               </Button>
-            ):
-          (
-            <Button
-              disabled={!selectedOpt}
-              type='submit'
-            >
-              Fertig
-            </Button>
-          )}
+            ) :
+            (
+              <Button
+                disabled={!selectedOpt}
+                type='submit'
+              >
+                Fertig
+              </Button>
+            )}
         </form>
-      </div>
+      </Container>
+    </div>
   );
 };
 

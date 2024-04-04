@@ -5,6 +5,7 @@ import Card from './components/Card/Card.jsx';
 import data from './mock/data.js';
 import Results from './components/Results/Results.jsx';
 import { calcResults } from './lib/helpers.js';
+import { useEffect } from 'react';
 
 // const userAnswers = [
 //   {
@@ -42,9 +43,12 @@ function App() {
     setUserAnswers(handleUserUpdate);
   };
 
-  const onTestSubmit = () => {
+  useEffect(() => {
     const results = calcResults(data.questions, userAnswers);
     setTestResults(results);
+  }, [userAnswers]);
+
+  const onTestSubmit = () => {
     setTestSubmitted(true);
   };
 
